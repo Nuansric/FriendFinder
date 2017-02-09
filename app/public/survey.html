@@ -8,8 +8,15 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<!-- Chosen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
 </head>
-<body style="background-image: url(../images/brickwall.png);" >
+<body style="background-image: url(images/brickwall.png);" >
 
 	<div class="container" style="color: #4C5454;" >
 		
@@ -20,9 +27,9 @@
 			<h3>Profile Information</h3>
 			<br>
 			<h4>Name (Required) </h4>
-			<input type="text" name="" id="name" class="form-control" required >
+			<input type="text" name="" id="name" class="userInput" required >
 			<h4>Link to Photo Image (Required)</h4>
-			<input type="text" name="" id="pictureLink" class="form-control" required >
+			<input type="text" name="" id="pictureLink" class="userInput" required >
 			
 		</div>
 
@@ -33,7 +40,7 @@
 
 			<h4><strong>Check Point 1</strong></h4>
 			<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp1">
+		 	<select data-placeholder="" class="userInput" id="cp1">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -44,7 +51,7 @@
 
 			<h4><strong>Check Point 2</strong></h4>
 			<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp2">
+		 	<select data-placeholder="" class="userInput" id="cp2">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -56,7 +63,7 @@
 
 			<h4><strong>Check Point 3</strong></h4>
 			<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp3">
+		 	<select data-placeholder="" class="userInput" id="cp3">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -68,7 +75,7 @@
 
 			<h4><strong>Check Point 4</strong></h4>
 			<h4>You rarely do something just out of sheer curiosity.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp4">
+		 	<select data-placeholder="" class="userInput" id="cp4">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -80,7 +87,7 @@
 
 			<h4><strong>Check Point 5</strong></h4>
 			<h4>People can rarely upset you.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp5">
+		 	<select data-placeholder="" class="userInput" id="cp5">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -92,7 +99,7 @@
 
 			<h4><strong>Check Point 6</strong></h4>
 			<h4>It is often difficult for you to relate to other people’s feelings.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp6">
+		 	<select data-placeholder="" class="userInput" id="cp6">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -104,7 +111,7 @@
 
 			<h4><strong>Check Point 7</strong></h4>
 			<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp7">
+		 	<select data-placeholder="" class="userInput" id="cp7">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -115,7 +122,7 @@
 
 			<h4><strong>Check Point 8</strong></h4>
 			<h4>You rarely get carried away by fantasies and ideas.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp8">
+		 	<select data-placeholder="" class="userInput" id="cp8">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -126,7 +133,7 @@
 
 			<h4><strong>Check Point 9</strong></h4>
 			<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp9">
+		 	<select data-placeholder="" class="userInput" id="cp9">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -137,7 +144,7 @@
 
 			<h4><strong>Check Point 10</strong></h4>
 			<h4>You feel more energetic after spending time with a group of people.</h4>
-		 	<select data-placeholder="" class="chosen-select" id="cp10">
+		 	<select data-placeholder="" class="userInput" id="cp10">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
 	            <option value="2">May be</option>
@@ -151,13 +158,15 @@
 			<br>
 
 			<!-- Submit Button -->
-			<button style="float: right; width:300px;" type="button" class="btn btn-lg btn-default" id="submit">Submit Profile</button>
+			<button style="float: right; width:300px;" type="submit" class="btn btn-lg btn-default" id="submit">Submit Profile</button>
 
 		</div>
 		
 		<footer style="margin-top: 100px;" class="footer">
 	      <div class="container">
 		        <p style="text-align: center;">	&copy; FriendFinder</p>
+		        <p style="text-align: center;"><a href="/api/friends">Friend API</a></p>
+		        
 	      </div>
 	    </footer>
 
@@ -165,7 +174,7 @@
 
 
 <!-- Modal -->
-	<div id="results" class="modal fade" role="dialog">
+	<div id="matchedResult" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
 	    <!-- Modal content-->
@@ -186,6 +195,71 @@
 	  </div>
 	</div>
 
+
+
+<script type="text/javascript">
+
+
+$("#submit").on("click", function(){
+
+	//validate whether all user input has been filled
+
+	function validateUserInput() {
+		var validInput = true;
+		  $(".userInput").each(function() {
+		    if ( $(this).val() === "" )
+		        validInput = false;
+		  });
+		  return validInput;
+	}
+
+
+	//if all the user input has been filled
+
+	if(validateUserInput() == true){
+
+			var newMemeber = {
+
+					name:$("#name").val().trim(),
+
+	    			pictureLink:$("#pictureLink").val().trim(),
+	    			
+	    			score: [$("#cp1").val(), $("#cp2").val(), $("#cp3").val(), $("#cp4").val(), $("#cp5").val(), $("#cp6").val(), $("#cp7").val(), $("#cp8").val(), $("#cp9").val(), $("#cp10").val() ]
+			}
+
+			$.post("/api/friends", newMemeber, function(data){
+
+				//Graping Result
+
+				console.log(data);
+
+				
+
+
+				// $("#matchedName").text(data.name);
+				// $("#matchedImg").attr("src", data.pictureLink);
+				// $("#matchedResult").modal("toogle");
+
+
+			});
+
+
+	}else{
+		alert("Please fill out the missing input!");
+	}
+
+	return false;
+
+	
+	// module.exports = newMemeber;
+
+});//on click
+
+
+
+
+
+</script>
 
 
 
