@@ -31,9 +31,9 @@
 			<h3>Profile Information</h3>
 			<br>
 			<h4>Name (Required) </h4>
-			<input type="text" name="" id="name" class="userInput" required >
+			<input style="width: 100%" type="text" name="" id="name" class="userInput" required >
 			<h4>Link to Photo Image (Required)</h4>
-			<input type="text" name="" id="pictureLink" class="userInput" required >
+			<input style="width: 100%" type="text" name="" id="pictureLink" class="userInput" required >
 			
 		</div>
 
@@ -47,7 +47,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp1">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -58,7 +58,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp2">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -70,7 +70,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp3">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -82,7 +82,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp4">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -94,7 +94,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp5">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -106,7 +106,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp6">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -118,7 +118,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp7">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -129,7 +129,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp8">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -140,7 +140,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp9">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -151,7 +151,7 @@
 		 	<select data-placeholder="" class="userInput" id="cp10">
 		 		<option value=""></option>
 	            <option value="1">So Wrong </option>
-	            <option value="2">May be</option>
+	            <option value="2">Maybe</option>
 	            <option value="3">Perhaps</option>
 	            <option value="4">Agree</option>
 	            <option value="5">So True </option>
@@ -188,8 +188,10 @@
 	        <h2 class="modal-title"><strong>Your Profile Best Match</strong></h2>
 	      </div>
 	      <div class="modal-body">
-	        <h2 id="matchedName"></h2>
-	        <img style="width: 250px; height: 300px;" id="matchedImg" src="http://vignette2.wikia.nocookie.net/ninjutsu-rpg/images/4/48/Sasuke-Uchiha-20.png/revision/latest?cb=20140519171946" alt="Your Best Match Profile Picture">
+	        <h2 id="matchedName" style="text-align: center;"></h2>
+	        <div style="margin-top: 25px">
+	        <img style="width: 40%; height: 300px; display: block; margin:auto; " id="matchedImg" src="" alt="Your Best Match Profile Picture">
+	        </div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -249,6 +251,18 @@ $("#submit").on("click", function(){
 				$("#matchedImg").attr("src", data.pictureLink);
 				$("#matchedResult").modal();
 
+				$("#name").val("");
+				$("#pictureLink").val("");
+				$("#cp1").val("");
+				$("#cp2").val("");
+				$("#cp3").val("");
+				$("#cp4").val("");
+				$("#cp5").val("");
+				$("#cp6").val("");
+				$("#cp7").val("");
+				$("#cp8").val("");
+				$("#cp9").val("");
+				$("#cp10").val("");
 
 			});
 
