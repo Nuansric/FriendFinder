@@ -16,7 +16,7 @@ app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 //ROUTER
 
-
+app.use(express.static(path.join(__dirname, "app")));
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);

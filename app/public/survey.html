@@ -8,9 +8,13 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	<!-- Font Awesome Glyphicons -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
+	<!-- Font Awesome Glyphicons -->
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+ -->
 	<!-- Chosen -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
@@ -158,7 +162,7 @@
 			<br>
 
 			<!-- Submit Button -->
-			<button style="float: right; width:300px;" type="submit" class="btn btn-lg btn-default" id="submit">Submit Profile</button>
+			<button style="float: right; width:300px;" type="submit" class="btn btn-lg btn-default" id="submit" >Submit Profile</button>
 
 		</div>
 		
@@ -185,7 +189,7 @@
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchedName"></h2>
-	        <img id="matchedImg" src="http://vignette2.wikia.nocookie.net/ninjutsu-rpg/images/4/48/Sasuke-Uchiha-20.png/revision/latest?cb=20140519171946" alt="Your Best Match Profile Picture">
+	        <img style="width: 250px; height: 300px;" id="matchedImg" src="http://vignette2.wikia.nocookie.net/ninjutsu-rpg/images/4/48/Sasuke-Uchiha-20.png/revision/latest?cb=20140519171946" alt="Your Best Match Profile Picture">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -193,16 +197,20 @@
 	    </div>
 
 	  </div>
-	</div>
+
+</div>
 
 
 
 <script type="text/javascript">
+$(document).ready(function(){
 
-
+    
 $("#submit").on("click", function(){
 
 	//validate whether all user input has been filled
+
+	console.log("Clicked");
 
 	function validateUserInput() {
 		var validInput = true;
@@ -236,12 +244,10 @@ $("#submit").on("click", function(){
 				console.log(data.pictureLink);
 
 
-				
-
 
 				$("#matchedName").text(data.name);
 				$("#matchedImg").attr("src", data.pictureLink);
-				$("#matchedResult").modal("toogle");
+				$("#matchedResult").modal();
 
 
 			});
@@ -260,7 +266,7 @@ $("#submit").on("click", function(){
 
 
 
-
+});
 
 </script>
 
