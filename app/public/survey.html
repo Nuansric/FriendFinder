@@ -226,7 +226,7 @@ $("#submit").on("click", function(){
 
 	//if all the user input has been filled
 
-	if(validateUserInput() == true){
+	if(validateUserInput() === true){
 
 			var newMemeber = {
 
@@ -235,7 +235,7 @@ $("#submit").on("click", function(){
 	    			pictureLink:$("#pictureLink").val().trim(),
 	    			
 	    			score: [$("#cp1").val(), $("#cp2").val(), $("#cp3").val(), $("#cp4").val(), $("#cp5").val(), $("#cp6").val(), $("#cp7").val(), $("#cp8").val(), $("#cp9").val(), $("#cp10").val() ]
-			}
+			};
 
 			$.post("/api/friends", newMemeber, function(data){
 
@@ -274,7 +274,6 @@ $("#submit").on("click", function(){
 	return false;
 
 	
-	// module.exports = newMemeber;
 
 });//on click
 
