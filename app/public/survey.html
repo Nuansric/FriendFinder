@@ -174,7 +174,7 @@
 
 
 <!-- Modal -->
-	<div id="matchedResult" class="modal fade" role="dialog">
+<div id="matchedResult" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
 	    <!-- Modal content-->
@@ -232,13 +232,16 @@ $("#submit").on("click", function(){
 				//Graping Result
 
 				console.log(data);
+				console.log(data.name);
+				console.log(data.pictureLink);
+
 
 				
 
 
-				// $("#matchedName").text(data.name);
-				// $("#matchedImg").attr("src", data.pictureLink);
-				// $("#matchedResult").modal("toogle");
+				$("#matchedName").text(data.name);
+				$("#matchedImg").attr("src", data.pictureLink);
+				$("#matchedResult").modal("toogle");
 
 
 			});

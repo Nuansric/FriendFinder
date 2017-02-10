@@ -28,14 +28,14 @@ var currentMatched;
 // ===============================================================================
 function findingTheMatched(newMember){
 
-  for (var i =0; i <firendData.length; i++){
-
+  for (var i =0; i <(firendData.length -1); i++){
+      scoreDifferent = 0
       candidate = firendData[i];
       candidateScore = firendData[i].score;
 
-      for (var i = 0; i < newMember.score.length; i++) {
+      for (var j = 0; j < newMember.score.length; j++) {
 
-        scoreDifferent += Math.abs(newMember.score[i] - candidateScore[i]);
+        scoreDifferent += Math.abs(parseInt(newMember.score[j]) - parseInt(candidateScore[j]));
        
       }
       // console.log(scoreDifferent);
@@ -46,28 +46,29 @@ function findingTheMatched(newMember){
       if(currentMatchedScore == 0){
 
           currentMatchedScore = scoreDifferent;
+          theMatched = candidate;
+
+          console.log("this is 0 "+ JSON.stringify(theMatched, null, 2));
 
 
-      }else if((currentMatchedScore !== 0) && (scoreDifferent <  currentMatchedScore)){
+      }else if(scoreDifferent <  currentMatchedScore){
 
               currentMatchedScore = scoreDifferent;
               theMatched = candidate;
 
-              console.log(theMatched);
+              console.log("this is 1 "+ JSON.stringify(theMatched, null, 2));
      }
-      // console.log(scoreDifferent);
-      // console.log(currentMatchedScore);
-      // console.log(newMember.name);
-      // console.log(candidate);
+      console.log(scoreDifferent);
+      console.log(currentMatchedScore);
+      console.log(newMember.name);
+      console.log(candidate);
+      console.log("This is 2 "+JSON.stringify(theMatched, null, 2));
 
 
   }
+console.log("This is 3"+ JSON.stringify(theMatched, null, 2));
 
 return(theMatched);
-
-
-
-
 
 }
 
@@ -95,8 +96,14 @@ app.post("/api/friends", function(req, res){
 
   var theMatched2 = findingTheMatched(newMember);
 
+  console.log(theMatched2);
+
 
 	res.json(theMatched2);
+
+  currentMatchedScore = 0;
+  theMatched = "";
+  theMatched2 = "";
   
   // console.log("New member: " + JSON.stringify(newMember, null, 2));
 
